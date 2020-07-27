@@ -33,6 +33,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "transpile": "tsc",
-    "build": "npm-run-all clean transpile"
+    "build": "npm-run-all clean transpile",
+    "prepublish": "yarn build"
   }
 }

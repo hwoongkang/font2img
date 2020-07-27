@@ -57,7 +57,7 @@ const eraseHelper = (
  */
 const convert = (srcFile: string, option: Partial<IOption> = defaultOption) => {
   // check if the files is indeed an otf format
-  if (path.parse(srcFile).ext !== "otf")
+  if (path.parse(srcFile).ext !== ".otf")
     throw new Error("Only otf files are supported");
 
   // resolve options
