@@ -1,9 +1,17 @@
 {
   "name": "font2img",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generate 100x100 images of hangul glyphs from the given *.otf file",
   "main": "dist",
   "author": "Kang Hyunwoong",
+  "repository": "hwoongkang/font2img",
+  "keywords": [
+    "font",
+    "otf",
+    "ttf",
+    "convert",
+    "image"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/chalk": "^2.2.0",
