@@ -57,7 +57,7 @@ const eraseHelper = (
  */
 const convert = (srcFile: string, option: Partial<IOption> = defaultOption) => {
   // check if the files is indeed an otf format
-  if (srcFile.split(".").pop() !== "otf")
+  if (path.parse(srcFile).ext !== "otf")
     throw new Error("Only otf files are supported");
 
   // resolve options
@@ -89,7 +89,7 @@ const convert = (srcFile: string, option: Partial<IOption> = defaultOption) => {
   const erase = () => eraseHelper(ctx, width, height);
 
   // where to save
-  const outname = name ?? srcFile.split(".")[0];
+  const outname = name ?? path.parse(srcFile).name;
 
   const out = path.resolve(outDir, family, outname);
 

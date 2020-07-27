@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.2
+
+### Changed
+
+- bug fix when no name was passed
+
 ## 0.0.1
 
 ### Added
