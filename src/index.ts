@@ -108,7 +108,7 @@ const convert = (srcFile: string, option: Partial<IOption> = defaultOption) => {
   bar.start(hangul.length + 52, 0);
 
   // process hangul characters
-  hangul.forEach((char) => {
+  hangul.forEach(char => {
     const glyph = getPath(char);
 
     erase();
@@ -135,7 +135,10 @@ const convert = (srcFile: string, option: Partial<IOption> = defaultOption) => {
     erase();
     upper.draw(ctx);
     fs.writeFileSync(
-      path.resolve(out, `uppercase-${lowercase}.png`),
+      path.resolve(
+        out,
+        unicodeName ? `${65 + ind}.png` : `uppercase-${lowercase}.png`
+      ),
       canvas.toBuffer()
     );
     bar.increment();
@@ -143,7 +146,10 @@ const convert = (srcFile: string, option: Partial<IOption> = defaultOption) => {
     erase();
     lower.draw(ctx);
     fs.writeFileSync(
-      path.resolve(out, `lowercase-${lowercase}.png`),
+      path.resolve(
+        out,
+        unicodeName ? `${97 + ind}.png` : `lowercase-${lowercase}.png`
+      ),
       canvas.toBuffer()
     );
     bar.increment();
